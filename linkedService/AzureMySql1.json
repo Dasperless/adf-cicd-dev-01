@@ -1,0 +1,29 @@
+{
+	"name": "AzureMySql1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"domain_name": {
+				"type": "String",
+				"defaultValue": "dev_domain"
+			},
+			"database_name": {
+				"type": "String",
+				"defaultValue": "dev_database"
+			},
+			"username": {
+				"type": "String",
+				"defaultValue": "dev_username"
+			},
+			"password": {
+				"type": "String",
+				"defaultValue": "dev_password"
+			}
+		},
+		"annotations": [],
+		"type": "AzureMySql",
+		"typeProperties": {
+			"connectionString": "Server=@{linkedService().domain_name};Port=3306;Database=@{linkedService().database_name};UID=@{linkedService().username};PWD=@{linkedService().password};SSLMode=1;UseSystemTrustStore=0"
+		}
+	}
+}
