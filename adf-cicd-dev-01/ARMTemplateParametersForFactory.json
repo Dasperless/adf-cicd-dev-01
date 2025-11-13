@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-cicd-dev-01"
+		},
+		"AzureMySql1_connectionString": {
+			"value": "Server=@{linkedService().domain_name};Port=3306;Database=@{linkedService().database_name};UID=@{linkedService().username};PWD=@{linkedService().password};SSLMode=1;UseSystemTrustStore=0"
+		}
+	}
+}
