@@ -1,0 +1,36 @@
+{
+	"name": "test",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "new",
+					"value": {
+						"value": "@pipeline().parameters.new_value",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"new_value": {
+				"type": "String",
+				"defaultValue": "dev_value"
+			}
+		},
+		"variables": {
+			"new": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
