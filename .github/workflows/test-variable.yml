@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow:
+  call-test:
     uses: Dasperless/cicd-templates/.github/workflows/test.yml@main
+    with:
+      environment: production
 
