@@ -2,7 +2,11 @@
 name: CI
 on: 
   workflow_dispatch:
-
+  
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   call-test:
     uses: Dasperless/cicd-templates/.github/workflows/test.yml@main
