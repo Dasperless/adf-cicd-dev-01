@@ -7,5 +7,5 @@ jobs:
   call-test:
     uses: Dasperless/cicd-templates/.github/workflows/test.yml@main
     with:
-      environment: production
+      environment: dev
 
